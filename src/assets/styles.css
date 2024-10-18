@@ -1,0 +1,72 @@
+body {
+  background-color: #333; /* Dark background for the body */
+  color: white; /* White text for better readability */
+}
+
+.navbar,
+.footer {
+  background-color: #444; /* Darker background for navbar and footer */
+  color: white; /* White text for navbar and footer */
+}
+
+.card {
+  background-color: #555; /* Dark background for cards */
+  border: none; /* Remove border */
+}
+
+.table {
+  background-color: #444; /* Dark background for tables */
+}
+
+/* Profile Page Styles */
+.container {
+  max-width: 800px; /* Limit the width of the profile page */
+  margin: 20px auto; /* Center the container */
+  padding: 20px; /* Add padding */
+  background-color: #444; /* Dark background for profile section */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
+
+.profile-info {
+  display: flex;
+  align-items: center; /* Align items vertically */
+  margin-bottom: 20px; /* Space below profile info */
+}
+
+.profile-img {
+  width: 150px; /* Size of profile image */
+  border-radius: 50%; /* Circular image */
+  margin-right: 20px; /* Space between image and text */
+  border: 3px solid #00c8ff; /* Add border to image */
+}
+
+h2 {
+  color: #00c8ff; /* Light blue for headings */
+  text-align: center; /* Center the main heading */
+}
+
+.about-me {
+  background-color: #555; /* Darker background for the about section */
+  padding: 15px; /* Add padding */
+  border-radius: 8px; /* Rounded corners */
+}
+
+h4 {
+  margin-bottom: 10px; /* Space below the subsection heading */
+  color: #00c8ff; /* Light blue for subsection heading */
+}
+
+.skills {
+  margin-top: 20px; /* Space above the skills section */
+}
+
+.skill-badge {
+  display: inline-block; /* Make badges inline */
+  background-color: #00c8ff; /* Light blue for skill badges */
+  color: #333; /* Dark text for contrast */
+  padding: 5px 10px; /* Padding for badges */
+  border-radius: 15px; /* Rounded corners */
+  margin: 5px; /* Space between badges */
+  font-size: 14px; /* Font size for badges */
+}
