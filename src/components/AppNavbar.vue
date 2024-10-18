@@ -2,15 +2,14 @@
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
       <div class="d-flex align-items-center">
-        <!-- Wrap the icon with router-link to redirect to the home -->
         <router-link class="navbar-brand" to="/home">
           <i class="fas fa-microchip"></i> <!-- Computer engineering icon -->
         </router-link>
         <div class="collapse navbar-collapse">
-          <ul class="navbar-nav me-auto"> <!-- Keep items to the left -->
+          <ul class="navbar-nav me-auto"> 
             <li class="nav-item">
               <router-link class="nav-link" to="/home">
-                <i class="fas fa-home"></i> Home <!-- Changed Dashboard to Home and updated the icon -->
+                <i class="fas fa-home"></i> Home 
               </router-link>
             </li>
             <li class="nav-item divider">|</li>
@@ -27,6 +26,12 @@
             </li>
             <li class="nav-item divider">|</li>
             <li class="nav-item">
+              <router-link class="nav-link" to="/creative">
+                <i class="fas fa-paint-brush"></i> Creative 
+              </router-link>
+            </li>
+            <li class="nav-item divider">|</li>
+            <li class="nav-item">
               <router-link class="nav-link" to="/contact">
                 <i class="fas fa-envelope"></i> Contact
               </router-link>
@@ -34,8 +39,7 @@
           </ul>
         </div>
       </div>
-      <div class="d-flex align-items-center"> <!-- Logout button on the right -->
-        <!-- Logout Button -->
+      <div class="d-flex align-items-center">
         <button class="btn btn-outline-danger" @click="logout">Logout</button>
       </div>
     </div>
@@ -47,7 +51,7 @@ export default {
   name: "AppNavbar",
   methods: {
     logout() {
-      this.$router.push('/'); // Redirect to the login page
+      this.$emit('logout'); // Emit logout event to parent
     },
   },
 };

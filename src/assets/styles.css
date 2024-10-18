@@ -1,6 +1,7 @@
 body {
   background-color: #333; /* Dark background for the body */
   color: white; /* White text for better readability */
+  font-family: 'Arial', sans-serif; /* Changed to a more readable font */
 }
 
 .navbar,
@@ -12,6 +13,12 @@ body {
 .card {
   background-color: #555; /* Dark background for cards */
   border: none; /* Remove border */
+  transition: transform 0.3s, box-shadow 0.3s; /* Animation for hover effects */
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Shadow on hover */
 }
 
 .table {
@@ -28,22 +35,23 @@ body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
 }
 
-.profile-info {
-  display: flex;
-  align-items: center; /* Align items vertically */
-  margin-bottom: 20px; /* Space below profile info */
-}
-
-.profile-img {
-  width: 150px; /* Size of profile image */
-  border-radius: 50%; /* Circular image */
-  margin-right: 20px; /* Space between image and text */
-  border: 3px solid #00c8ff; /* Add border to image */
-}
-
 h2 {
   color: #00c8ff; /* Light blue for headings */
   text-align: center; /* Center the main heading */
+  font-family: 'Courier New', Courier, monospace; /* Techie font */
+  font-size: 2rem; /* Increase font size */
+  margin-bottom: 20px; /* Space below the title */
+  text-transform: uppercase; /* Uppercase for techie feel */
+  letter-spacing: 1px; /* Spacing for a techie look */
+}
+
+.card-title {
+  font-weight: bold; /* Make project titles bold */
+  color: #00c8ff; /* Light blue for project titles */
+}
+
+.card-text {
+  color: #e0e0e0; /* Lighter gray for project descriptions for better readability */
 }
 
 .about-me {

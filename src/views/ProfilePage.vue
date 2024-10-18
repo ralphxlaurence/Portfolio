@@ -16,7 +16,7 @@
     <div class="about-me">
       <h4><i class="fas fa-user"></i> Bio:</h4>
       <p>
-        Hi, I'm Ralph! I am a passionate Computer Engineering student. I enjoy exploring new technologies,
+        Hi, I'm Ralph! I am currently 4th Year Computer Engineering student. I enjoy exploring new technologies,
         working on projects that combine hardware and software, and continuously improving my skills in programming
         and cybersecurity.
       </p>

@@ -6,25 +6,12 @@
         <h1 class="title">Welcome, I'm Ralph!</h1>
         <p class="subtitle">A Computer Engineering Student from TIPM</p>
         
-        <!-- Add Computer Engineering theme cards -->
-        <div class="card-container">
-          <div class="card">
-            <i class="fas fa-microchip card-icon"></i>
-            <h2>Microcontroller Projects</h2>
-            <p>Explore projects that integrate hardware and software to solve real-world problems.</p>
-          </div>
-
-          <div class="card">
-            <i class="fas fa-laptop-code card-icon"></i>
-            <h2>Software Engineering</h2>
-            <p>Dive deep into C++, Python, and assembly languages to create optimized software.</p>
-          </div>
-
-          <div class="card">
-            <i class="fas fa-network-wired card-icon"></i>
-            <h2>Networking</h2>
-            <p>Study communication protocols, network design, and cybersecurity to stay ahead in the digital age.</p>
-          </div>
+        <!-- Welcome Section -->
+        <div class="welcome-section">
+          <p class="welcome-description">
+            Have a surface dive about me by strolling here in my Web App. Feel free to look here! I'll update something of me if I will have new discoveries/achievements all throughout my journey. :>
+          </p>
+          <button class="know-more-button" @click="goToProfile">Know Me More!</button> <!-- Updated button -->
         </div>
       </div>
     </main>
@@ -34,6 +21,11 @@
 <script>
 export default {
   name: 'HomePage',
+  methods: {
+    goToProfile() {
+      this.$router.push({ name: 'Profile' }); // Redirect to ProfilePage
+    },
+  },
 }
 </script>
 
@@ -42,10 +34,10 @@ export default {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  background: #1b1e23 url('https://www.toptal.com/designers/subtlepatterns/patterns/dashed-bright.png'); /* Dark background with a circuit-style pattern */
+  background: url('@/assets/bg.png') no-repeat center center fixed; /* Use bg.png as background */
+  background-size: cover; /* Ensure the image covers the entire container */
   color: white;
   font-family: 'Arial', sans-serif;
-  padding-top: 50px; /* Ensure proper spacing */
 }
 
 .content {
@@ -53,73 +45,107 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: transparent;
-  color: white;
+  background-color: rgba(0, 0, 0, 0.5); /* Added a darker overlay for better contrast */
+  backdrop-filter: blur(5px); /* Blur effect for background */
+  transition: background-color 0.5s; /* Smooth transition for background */
 }
 
 .dashboard-content {
   text-align: center;
+  padding: 40px 30px; /* Increased padding for larger space */
+  background: rgba(0, 0, 0, 0.7); /* Dark semi-transparent background for better contrast */
+  border-radius: 20px; /* More rounded corners */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7); /* Enhanced shadow for depth */
+  transform: translateY(-20px); /* Slightly lift the content */
+  animation: slideIn 0.8s ease-out forwards; /* Slide-in effect for content */
 }
 
 .title {
-  font-size: 48px;
-  margin-bottom: 10px;
+  font-size: 56px; /* Increased font size */
+  margin-bottom: 15px;
   color: #00c8ff; /* Light blue techy color */
-  font-weight: 600;
+  font-weight: 700; /* Increased font weight */
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6); /* Enhanced text shadow for depth */
 }
 
 .subtitle {
-  font-size: 22px;
-  margin-bottom: 30px;
+  font-size: 24px; /* Increased font size */
+  margin-bottom: 40px;
   color: #a0aec0; /* Softer gray text */
 }
 
-/* Card Styles */
-.card-container {
+/* Welcome Section Styles */
+.welcome-section {
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  margin: 0 auto;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center;
+  margin-top: 30px; /* Space above the description */
 }
 
-.card {
-  background-color: #2d323b; /* Darker card background */
-  border-radius: 8px;
-  padding: 20px;
-  text-align: center;
-  color: white;
-  width: 300px;
-  margin: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-5px); /* Subtle hover effect */
-}
-
-.card-icon {
-  font-size: 48px;
-  margin-bottom: 15px;
-  color: #00c8ff; /* Techy icon color */
-}
-
-.card h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
-  color: #00c8ff; /* Light blue title */
-}
-
-.card p {
-  font-size: 16px;
+.welcome-description {
+  font-size: 20px; /* Increased font size */
+  margin-bottom: 25px; /* Space below the description */
   color: #a0aec0; /* Softer gray text */
+  max-width: 800px; /* Increased max-width for better readability */
+  line-height: 1.6; /* Improved line spacing */
+  text-align: center; /* Center the text */
+  animation: fadeIn 1s; /* Fade-in effect for description */
+}
+
+.know-more-button {
+  padding: 15px 30px; /* Increased button size */
+  border: none;
+  border-radius: 10px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  font-size: 20px; /* Increased font size */
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Enhanced transitions */
+  animation: bounceIn 1s; /* Bounce-in effect for button */
+}
+
+.know-more-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05); /* Slightly enlarge button on hover */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); /* Shadow effect on hover */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceIn {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 @media (max-width: 768px) {
-  .card-container {
-    flex-direction: column;
-    align-items: center;
+  .welcome-section {
+    padding: 0 15px; /* Padding on smaller screens */
   }
 }
 </style>
