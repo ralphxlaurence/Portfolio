@@ -31,7 +31,7 @@ You can download Git for running the Web App through localhost/IP address (Optio
 2. cd admin-dashboard
 3. npm run serve
 
-## Installation of packages/dependencies:
+### Installation of packages/dependencies:
 1. npm install @fortawesome/fontawesome-free
 
 ### Navigation of Browser
@@ -56,9 +56,9 @@ main.js: Entry point for the application
 If you'd like to contribute, feel free to fork the repository and create a pull request.
 
 
-## Free to Contact me:
+## Feel free to Contact me:
 
-Ralph Laurence A. Batang
+Name: Ralph Laurence A. Batang
 Email: ralph.batang@gmail.com / mrlbatang@tip.edu.ph
   
 
