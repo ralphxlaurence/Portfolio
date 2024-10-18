@@ -31,7 +31,7 @@ You can download Git for running the Web App through localhost/IP address (Optio
 2. cd admin-dashboard
 3. npm run serve
 
-#Installation of packages/dependencies:
+## Installation of packages/dependencies:
 1. npm install @fortawesome/fontawesome-free
 
 ### Navigation of Browser
